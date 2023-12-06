@@ -14,5 +14,5 @@ func main() {
 	if err != nil {
 		log.Fatal("Error: ", err.Error())
 	}
-	fmt.Println(os.Getenv("TEST"))
+	fmt.Println(os.Getenv("WELCOME"))
 }
