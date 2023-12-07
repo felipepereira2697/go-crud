@@ -48,4 +48,4 @@ func NewInternalServerError(message string) *RestErr {
 	}
 }
 
-//@TODO: Create errors for: NotFound and 403 for authentication
+//@TODO: Create errors for: NotFound and 403 for authentication.
