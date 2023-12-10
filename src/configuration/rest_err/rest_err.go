@@ -14,7 +14,7 @@ type Causes struct {
 	Message string `json:"message"`
 }
 
-// Defining a constructor
+// Defining a constructor for handling request error
 func NewRestErr(message string, err string, code int, causes []Causes) *RestErr {
 	return &RestErr{
 		Message: message,
@@ -31,6 +31,7 @@ func NewBadRequestError(message string) *RestErr {
 		Code:    http.StatusBadRequest,
 	}
 }
+
 func NewBadRequestValidationError(message string, causes []Causes) *RestErr {
 	return &RestErr{
 		Message: message,
