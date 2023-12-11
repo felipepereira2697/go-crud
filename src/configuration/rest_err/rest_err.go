@@ -42,6 +42,7 @@ func NewBadRequestValidationError(message string, causes []Causes) *RestErr {
 }
 
 func NewInternalServerError(message string) *RestErr {
+	//Return error reference
 	return &RestErr{
 		Message: message,
 		Err:     "internal_server_error",
