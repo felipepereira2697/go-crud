@@ -50,4 +50,18 @@ func NewInternalServerError(message string) *RestErr {
 	}
 }
 
-//@TODO: Create errors for: NotFound and 403 for authentication.
+func NewForbiddenError(message string) *RestErr {
+	return &RestErr{
+		Message: message,
+		Err:     "forbidden_error",
+		Code:    http.StatusForbidden,
+	}
+}
+
+func NewNotFoundError(message string) *RestErr {
+	return &RestErr{
+		Message: message,
+		Err:     "not_found_error",
+		Code:    http.StatusNotFound,
+	}
+}
